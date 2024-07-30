@@ -6,6 +6,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
+        "automattic/woocommerce": "^3.1",
         "filament/filament": "^3.2",
         "laravel/framework": "^11.9",
         "laravel/telescope": "^5.1",
@@ -15,6 +16,7 @@
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
+        "friendsofphp/php-cs-fixer": "^3.60",
         "laravel/breeze": "^2.1",
         "laravel/pint": "^1.13",
         "laravel/sail": "^1.26",

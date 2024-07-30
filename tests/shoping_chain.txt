@@ -1,0 +1,58 @@
+# Shopping chain #
+1. Product Import: <tasks: write test OK>
+    - {done}:
+        - Add Products to the Database:
+            - app/Jobs/SyncProducts.php -> call via cron job
+        - Add Products to the Database Test
+            - $product = Product::factory()->create();
+            - $this->assertModelExists($product);
+2. Product Listing: <tasks: write test>
+    - {done}:
+        - Product Listing Page
+            - app/Http/Controllers/ProductController.php
+        - Product Listing Page Test
+            - $response = $this->get(route('products.index'));
+            - $response->assertStatus(200);
+    - This is where all the products are displayed. It could be a simple list or a grid, with each item showing key details like the product name, image, price, and a brief description.
+    - Search Functionality: This allows users to find specific products by typing in keywords. The application then returns a list of products that match the search criteria.
+    - Product Filters: These are used to narrow down the product list based on certain criteria like category, price range, brand, etc.
+    - Product Details Page: When a customer clicks on a product, they are taken to a detailed page for that product. This page typically shows more information about the product, such as detailed specifications, more images, customer reviews, etc.
+3. Add to Cart: <tasks: write test>  <done:>
+    - Selection: The user browses the product listings and selects a product they are interested in. They can usually specify the quantity of the product they want to add to the cart.
+    - Add to Cart Button: The user clicks on an "Add to Cart" button associated with the product. This triggers a client-side JavaScript function.
+    - Update Cart: The JavaScript function updates the cart, usually by sending an AJAX request to the server with the product ID and quantity. The server-side PHP code then updates the user's session to include this product in their cart.
+    - Display Cart: The user's cart is usually displayed somewhere on the page (like in the header or sidebar). This is updated to reflect the new product. This could involve another AJAX request to get the updated cart details, or the cart could be updated on the client side along with the initial "Add to Cart" request.
+    - Continue Shopping or Checkout: After adding a product to the cart, the user can either continue shopping and add more products, or proceed to the checkout to finalize their purchase.
+
+4. Checkout: <tasks: write test> <done:>
+    - Review Cart: The user reviews the items in their cart, making any last-minute changes like adjusting quantities or removing items.
+    - Enter Shipping Information: The user enters their shipping address where they want the order to be delivered.
+    - Choose Shipping Method: If multiple shipping options are available, the user chooses the one they prefer.
+    - Enter Payment Information: The user enters their payment details. This could be a credit card number, PayPal account, etc.
+    - Review Order: The user reviews their order one last time, including the items, shipping information, shipping method, and payment information.
+    - Submit Order: The user submits their order. The server-side code then processes the order, which could involve charging the payment method, updating the inventory, and generating an order confirmation.
+
+5. Payment: <tasks: write test> <done:>
+    - Payment Gateway:
+        - Enter Payment Information: The user enters their payment details. This could be a credit card number, PayPal account, etc.
+        - Payment Gateway: The payment information is sent to the payment gateway. The gateway is responsible for securely transmitting the payment data to the payment processor.
+        - Payment Processor: The payment processor communicates with the user's bank or credit card company to authorize the payment. If the payment is approved, the processor sends the confirmation back to the gateway.
+        - Confirmation: The payment gateway sends the confirmation back to the e-commerce application, which then finalizes the order.
+        - Error Handling: If there are any issues with the payment (like insufficient funds or incorrect payment details), the application needs to handle these errors gracefully. This could involve showing an error message to the user and asking them to enter their payment information again.
+6. Order Confirmation: <tasks: write test> <done:>
+    - Order Confirmation Page: After the user submits their order and the payment is processed, they are redirected to an order confirmation page. This page confirms that the order has been received and is being processed.
+    - Order Details: The order confirmation page typically includes details of the order, such as the items purchased, the total cost, the shipping address, and the estimated delivery date.
+    - Order Confirmation Email: In addition to the order confirmation page, the user usually receives an order confirmation email. This email serves as a receipt and includes the same details as the order confirmation page.
+    - Order Tracking: The order confirmation page and email often include information on how to track the order. This could be a tracking number that can be used on a courier's website, or a link to an order status page on the e-commerce site.
+
+7. Shipping & Delivery: <tasks: write test> <done:>
+    - Order Processing: Once an order is confirmed, it goes into the processing stage. This involves picking the ordered items from the inventory, packing them securely, and preparing them for shipment.
+    - Shipping: The packed items are handed over to a courier service for delivery. The courier service is responsible for transporting the package to the customer's address.
+    - Delivery: The courier service delivers the package to the customer's address. The customer may need to sign for the delivery, depending on the courier's policies and the value of the order.
+    - Tracking: Throughout the shipping and delivery process, the customer can usually track the status of their order. This could be through a tracking number provided by the courier service, or through updates provided by the e-commerce site.
+
+8. Post-Purchase Support: <tasks: write test> <done:>
+    - Customer Service: The customer can contact customer service with any issues or questions. This could be through email, phone, live chat, or a contact form on the e-commerce site.
+    - Returns and Refunds: If the customer is not satisfied with their purchase, they can usually return it for a refund or exchange. The e-commerce site should provide clear information on how to do this.
+    - Order Issues: If there are any issues with the order (like missing or damaged items), the customer can report these to customer service. The e-commerce site should have a process in place to resolve these issues.
+    - Product Support: If the customer needs help with a product they've purchased (like setup or troubleshooting), the e-commerce site may provide resources like guides, FAQs, or forums.
