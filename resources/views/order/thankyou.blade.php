@@ -1,4 +1,4 @@
-<x-layouts.app>
+<x-app-layout>
     <div class="flex h-screen items-center justify-center">
         <div class="rounded bg-gradient-to-r from-purple-500 via-green-500 to-blue-500 p-1 shadow-lg">
             <div class="flex flex-col items-center space-y-2 bg-white p-4">
@@ -25,4 +25,4 @@
             </div>
         </div>
     </div>
-</x-layouts.app>
+</x-app-layout>

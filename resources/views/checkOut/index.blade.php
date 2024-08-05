@@ -1,4 +1,4 @@
-<x-layouts.app>
+<x-app-layout>
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
@@ -328,4 +328,4 @@
                 Order</button>
         </div>
     </form>
-</x-layouts.app>
+</x-app-layout>

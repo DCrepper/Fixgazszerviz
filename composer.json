@@ -7,6 +7,7 @@
     "require": {
         "php": "^8.2",
         "automattic/woocommerce": "^3.1",
+        "bensampo/laravel-enum": "^6.11",
         "filament/filament": "^3.2",
         "laravel/framework": "^11.9",
         "laravel/telescope": "^5.1",
@@ -18,6 +19,7 @@
         "fakerphp/faker": "^1.23",
         "friendsofphp/php-cs-fixer": "^3.60",
         "laravel/breeze": "^2.1",
+        "laravel/dusk": "^8.2",
         "laravel/pint": "^1.13",
         "laravel/sail": "^1.26",
         "mockery/mockery": "^1.6",

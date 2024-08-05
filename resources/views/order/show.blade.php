@@ -1,4 +1,4 @@
-<x-layouts.app>
+<x-app-layout>
 
     <div class="px-4 py-14 2xl:container md:px-6 2xl:mx-auto 2xl:px-20">
         <div class="item-start flex flex-col justify-start space-y-2">
@@ -189,4 +189,4 @@
         </div>
     </div>
 
-</x-layouts.app>
+</x-app-layout>

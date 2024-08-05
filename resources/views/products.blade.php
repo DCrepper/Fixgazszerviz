@@ -1,4 +1,4 @@
-<x-layouts.app>
+<x-app-layout>
 
     <div class="container mx-auto px-6">
         <h3 class="text-2xl font-medium text-gray-700">Wrist Watch</h3>
@@ -43,4 +43,4 @@
             </div>
         </div>
     </div>
-</x-layouts.app>
+</x-app-layout>

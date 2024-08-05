@@ -1,4 +1,4 @@
-<x-layouts.app>
+<x-app-layout>
     <div class="container mx-auto px-6">
         <h3 class="text-2xl font-medium text-gray-700">Checkout</h3>
         <div class="mt-8 flex flex-col lg:flex-row">
@@ -57,4 +57,4 @@
             <button class="mt-8 w-full bg-gray-900 py-3 text-lg uppercase text-white">Checkout</button>
         </a>
     </div>
-</x-layouts.app>
+</x-app-layout>

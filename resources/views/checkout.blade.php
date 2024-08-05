@@ -1,4 +1,4 @@
-<x-layouts.app>
+<x-app-layout>
     <div class="container mx-auto px-6">
         <h3 class="text-2xl font-medium text-gray-700">Checkout</h3>
         <div class="mt-8 flex flex-col lg:flex-row">
@@ -128,4 +128,4 @@
             </div>
         </div>
     </div>
-</x-layouts.app>
+</x-app-layout>
